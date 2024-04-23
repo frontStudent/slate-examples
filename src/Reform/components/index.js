@@ -1,32 +1,57 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BoldOutlined } from "@ant-design/icons";
+import {
+  BoldOutlined,
+  ItalicOutlined,
+  UnderlineOutlined,
+  AlignLeftOutlined,
+  AlignCenterOutlined,
+  AlignRightOutlined,
+  MenuOutlined
+} from "@ant-design/icons";
 import { cx, css } from "@emotion/css";
 
-export const Icon = ({type}) => (
-  <BoldOutlined />
-);
+export const Icon = ({ type }) => {
+  switch (type) {
+    case "bold":
+      return <BoldOutlined />;
+    case "italic":
+      return <ItalicOutlined />;
+    case "underlined":
+      return <UnderlineOutlined />;
+    case "align_left":
+      return <AlignLeftOutlined />;
+    case "align_center":
+      return <AlignCenterOutlined />;
+    case "align_right":
+      return <AlignRightOutlined />;
+    case "menu":
+      return <MenuOutlined />;
+    default:
+      return <div>Icon</div>;
+  }
+};
+
 export const ToolButton = React.forwardRef(
   ({ className, active, reversed, ...props }, ref) => (
-
-      <span
-        {...props}
-        ref={ref}
-        className={cx(
-          className,
-          css`
-            cursor: pointer;
-            /* color: ${reversed
-              ? active
-                ? "white"
-                : "#aaa"
-              : active
-              ? "black"
-              : "#999"}; */
-            background-color: ${active ? '#ccc' : 'transparent'};
-          `
-        )}
-      />
+    <span
+      {...props}
+      ref={ref}
+      className={cx(
+        className,
+        css`
+          cursor: pointer;
+          /* color: ${reversed
+            ? active
+              ? "white"
+              : "#aaa"
+            : active
+            ? "black"
+            : "#999"}; */
+          background-color: ${active ? "#ccc" : "transparent"};
+        `
+      )}
+    />
   )
 );
 export const EditorValue = React.forwardRef(

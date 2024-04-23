@@ -74,18 +74,18 @@ const RichTextExample = ({ initialValue }) => {
         rel="stylesheet"
       ></link>
       <Toolbar>
-        <MarkButton format="bold" icon="format_bold" />
-        <MarkButton format="italic" icon="format_italic" />
-        <MarkButton format="underline" icon="format_underlined" />
+        <MarkButton format="bold" icon="bold" />
+        <MarkButton format="italic" icon="italic" />
+        <MarkButton format="underline" icon="underlined" />
         <MarkButton format="code" icon="code" />
         <BlockButton format="heading-one" icon="looks_one" />
         <BlockButton format="heading-two" icon="looks_two" />
         <BlockButton format="block-quote" icon="format_quote" />
         <BlockButton format="numbered-list" icon="format_list_numbered" />
         <BlockButton format="bulleted-list" icon="format_list_bulleted" />
-        <BlockButton format="left" icon="format_align_left" />
-        <BlockButton format="center" icon="format_align_center" />
-        <BlockButton format="right" icon="format_align_right" />
+        <BlockButton format="left" icon="align_left" />
+        <BlockButton format="center" icon="align_center" />
+        <BlockButton format="right" icon="align_right" />
         <BlockButton format="justify" icon="format_align_justify" />
         <MenuButton format="" icon="menu" />
       </Toolbar>
@@ -398,7 +398,7 @@ const MarkButton = ({ format, icon }) => {
         toggleMark(editor, format);
       }}
     >
-      <Icon>{icon}</Icon>
+      <Icon type={icon}></Icon>
     </ToolButton>
   );
 };

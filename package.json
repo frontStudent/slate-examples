@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
     "@emotion/css": "^11.11.2",
     "ahooks": "^3.7.10",
     "antd": "^5.15.4",

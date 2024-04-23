@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { BoldOutlined } from "@ant-design/icons";
 import { cx, css } from "@emotion/css";
 
+export const Icon = ({type}) => (
+  <BoldOutlined />
+);
 export const ToolButton = React.forwardRef(
   ({ className, active, reversed, ...props }, ref) => (
 
@@ -71,21 +74,6 @@ export const EditorValue = React.forwardRef(
     );
   }
 );
-
-export const Icon = React.forwardRef(({ className, ...props }, ref) => (
-  <span
-    {...props}
-    ref={ref}
-    className={cx(
-      "material-icons",
-      className,
-      css`
-        font-size: 18px;
-        vertical-align: text-bottom;
-      `
-    )}
-  />
-));
 
 export const Instruction = React.forwardRef(({ className, ...props }, ref) => (
   <div
